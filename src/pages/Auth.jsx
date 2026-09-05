@@ -1,8 +1,12 @@
 import "./Auth.css";
 import LoginForm from "../components/Auth/LoginForm";
 import RegisterForm from "../components/Auth/RegisterForm";
+import { useState } from "react";
 
 const Auth = () => {
+
+  const [isRegister, setRegister] = useState(false);
+
   return (
     <main className="auth-page">
       <div className="auth-container">
@@ -78,13 +82,15 @@ const Auth = () => {
 
             <div className="auth-switch">
 
-              <div className="auth-switch-slider"></div>
+              <div className={`auth-switch-slider ${!isRegister ? "active": ""}`} ></div>
 
-              <button className="auth-switch-button active">
+              <button className={`auth-switch-button ${!isRegister ? "active" : ""}`}
+              onClick={()=> {setRegister(false)}}>
                 Login
               </button>
 
-              <button className="auth-switch-button">
+              <button className={`auth-switch-button ${isRegister ? "active" : ""}`}
+              onClick={()=> { setRegister(true)}} >
                 Register
               </button>
 
@@ -95,15 +101,7 @@ const Auth = () => {
 
             <div className="auth-form-container">
 
-               {/* {/* 
-                // Your React logic will render either: */}
-
-                <LoginForm />
-
-                {/* // OR */}
-
-                <RegisterForm />
-               {/* */} */
+               {isRegister? <RegisterForm /> : <LoginForm/>}
 
             </div>
 
