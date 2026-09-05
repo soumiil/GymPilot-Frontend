@@ -146,10 +146,9 @@ const Auth = () => {
                   relative z-10 w-1/2 rounded-lg
                   text-sm font-semibold
                   transition-colors duration-200
-                  ${
-                    !isShowRegister
-                      ? "text-bg-primary"
-                      : "text-text-muted hover:text-text-primary"
+                  ${!isShowRegister
+                    ? "text-bg-primary"
+                    : "text-text-muted hover:text-text-primary"
                   }
                 `}
               >
@@ -164,10 +163,9 @@ const Auth = () => {
                   relative z-10 w-1/2 rounded-lg
                   text-sm font-semibold
                   transition-colors duration-200
-                  ${
-                    isShowRegister
-                      ? "text-bg-primary"
-                      : "text-text-muted hover:text-text-primary"
+                  ${isShowRegister
+                    ? "text-bg-primary"
+                    : "text-text-muted hover:text-text-primary"
                   }
                 `}
               >
