@@ -1,28 +1,34 @@
-import "../index.css"
-
 const RegisterForm = () => {
   return (
-    <div className="auth-form">
+    <div className="w-full">
 
-      <div className="auth-form-header">
-        <h1>Create your account</h1>
-        <p>Set up your gym administrator account.</p>
+      {/* Header */}
+      <div className="mb-7">
+        <h1 className="text-2xl font-bold tracking-tight text-text-primary">
+          Create your account
+        </h1>
+
+        <p className="mt-2 text-sm text-text-secondary">
+          Set up your gym administrator account.
+        </p>
       </div>
 
 
-      <form>
+      <form className="space-y-5">
 
         {/* Full Name */}
+        <div className="space-y-2">
 
-        <div className="form-group">
-
-          <label htmlFor="register-name">
+          <label
+            htmlFor="register-name"
+            className="block text-sm font-medium text-text-secondary"
+          >
             Full name
           </label>
 
-          <div className="input-wrapper">
+          <div className="relative">
 
-            <span className="input-icon">
+            <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-sm text-text-muted">
               ♙
             </span>
 
@@ -32,6 +38,19 @@ const RegisterForm = () => {
               name="name"
               placeholder="Enter your full name"
               autoComplete="name"
+              className="
+                h-11 w-full rounded-lg
+                border border-border
+                bg-bg-tertiary
+                px-10
+                text-sm text-text-primary
+                placeholder:text-text-muted
+                outline-none
+                transition-all duration-200
+                hover:border-border-hover
+                focus:border-primary
+                focus:ring-2 focus:ring-primary-soft
+              "
             />
 
           </div>
@@ -40,16 +59,18 @@ const RegisterForm = () => {
 
 
         {/* Email */}
+        <div className="space-y-2">
 
-        <div className="form-group">
-
-          <label htmlFor="register-email">
+          <label
+            htmlFor="register-email"
+            className="block text-sm font-medium text-text-secondary"
+          >
             Email address
           </label>
 
-          <div className="input-wrapper">
+          <div className="relative">
 
-            <span className="input-icon">
+            <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-sm text-text-muted">
               @
             </span>
 
@@ -59,6 +80,19 @@ const RegisterForm = () => {
               name="email"
               placeholder="admin@example.com"
               autoComplete="email"
+              className="
+                h-11 w-full rounded-lg
+                border border-border
+                bg-bg-tertiary
+                px-10
+                text-sm text-text-primary
+                placeholder:text-text-muted
+                outline-none
+                transition-all duration-200
+                hover:border-border-hover
+                focus:border-primary
+                focus:ring-2 focus:ring-primary-soft
+              "
             />
 
           </div>
@@ -67,16 +101,18 @@ const RegisterForm = () => {
 
 
         {/* Password */}
+        <div className="space-y-2">
 
-        <div className="form-group">
-
-          <label htmlFor="register-password">
+          <label
+            htmlFor="register-password"
+            className="block text-sm font-medium text-text-secondary"
+          >
             Password
           </label>
 
-          <div className="input-wrapper">
+          <div className="relative">
 
-            <span className="input-icon">
+            <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[10px] text-text-muted">
               ◆
             </span>
 
@@ -86,11 +122,31 @@ const RegisterForm = () => {
               name="password"
               placeholder="Create a password"
               autoComplete="new-password"
+              className="
+                h-11 w-full rounded-lg
+                border border-border
+                bg-bg-tertiary
+                px-10 pr-16
+                text-sm text-text-primary
+                placeholder:text-text-muted
+                outline-none
+                transition-all duration-200
+                hover:border-border-hover
+                focus:border-primary
+                focus:ring-2 focus:ring-primary-soft
+              "
             />
 
             <button
               type="button"
-              className="password-toggle"
+              className="
+                absolute right-3.5 top-1/2
+                -translate-y-1/2
+                text-xs font-medium
+                text-text-muted
+                transition-colors
+                hover:text-primary
+              "
             >
               Show
             </button>
@@ -101,16 +157,18 @@ const RegisterForm = () => {
 
 
         {/* Confirm Password */}
+        <div className="space-y-2">
 
-        <div className="form-group">
-
-          <label htmlFor="register-confirm-password">
+          <label
+            htmlFor="register-confirm-password"
+            className="block text-sm font-medium text-text-secondary"
+          >
             Confirm password
           </label>
 
-          <div className="input-wrapper">
+          <div className="relative">
 
-            <span className="input-icon">
+            <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[10px] text-text-muted">
               ◆
             </span>
 
@@ -120,11 +178,31 @@ const RegisterForm = () => {
               name="confirmPassword"
               placeholder="Confirm your password"
               autoComplete="new-password"
+              className="
+                h-11 w-full rounded-lg
+                border border-border
+                bg-bg-tertiary
+                px-10 pr-16
+                text-sm text-text-primary
+                placeholder:text-text-muted
+                outline-none
+                transition-all duration-200
+                hover:border-border-hover
+                focus:border-primary
+                focus:ring-2 focus:ring-primary-soft
+              "
             />
 
             <button
               type="button"
-              className="password-toggle"
+              className="
+                absolute right-3.5 top-1/2
+                -translate-y-1/2
+                text-xs font-medium
+                text-text-muted
+                transition-colors
+                hover:text-primary
+              "
             >
               Show
             </button>
@@ -135,34 +213,74 @@ const RegisterForm = () => {
 
 
         {/* Terms */}
+        <label className="flex cursor-pointer items-start gap-2.5">
 
-        <label className="terms">
+          <input
+            type="checkbox"
+            className="
+              mt-0.5 h-4 w-4 shrink-0
+              cursor-pointer
+              rounded border-border
+              bg-bg-tertiary
+              accent-primary
+            "
+          />
 
-          <input type="checkbox" />
+          <span className="text-xs leading-5 text-text-secondary">
 
-          <span>
             I agree to the{" "}
-            <a href="/terms">
+
+            <a
+              href="/terms"
+              className="
+                font-medium text-primary
+                transition-colors
+                hover:text-primary-light
+              "
+            >
               Terms of Service
             </a>{" "}
+
             and{" "}
-            <a href="/privacy">
+
+            <a
+              href="/privacy"
+              className="
+                font-medium text-primary
+                transition-colors
+                hover:text-primary-light
+              "
+            >
               Privacy Policy
             </a>.
+
           </span>
 
         </label>
 
 
         {/* Submit */}
-
         <button
           type="submit"
-          className="auth-submit-button"
+          className="
+            flex h-11 w-full
+            items-center justify-center gap-2
+            rounded-lg
+            bg-primary
+            px-4
+            text-sm font-semibold
+            text-bg-primary
+            shadow-sm shadow-primary-glow
+            transition-all duration-200
+            hover:bg-primary-hover
+            hover:shadow-md hover:shadow-primary-glow
+            focus:outline-none
+            focus:ring-2 focus:ring-primary-soft
+            active:scale-[0.99]
+          "
         >
-          Create account
-
-          <span>→</span>
+          <span>Create account</span>
+          <span className="text-base">→</span>
         </button>
 
       </form>
