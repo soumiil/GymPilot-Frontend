@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+}
+
+:root {
+  /* ================================
+     BACKGROUNDS
+     ================================ */
+
+  --bg-primary: #08110E;
+  --bg-secondary: #0C1713;
+  --bg-tertiary: #0F1C17;
+
+  /* Sidebar */
+  --sidebar-bg: #091410;
+
+  /* Cards / Panels */
+  --card-bg: #0C1713;
+  --card-bg-hover: #101E18;
+  --card-bg-elevated: #122019;
+
+
+  /* ================================
+     BRAND / PRIMARY
+     ================================ */
+
+  --primary: #96E652;
+  --primary-hover: #82D64B;
+  --primary-light: #B5F577;
+
+  /* Soft green backgrounds */
+  --primary-soft: rgba(150, 230, 82, 0.10);
+  --primary-glow: rgba(150, 230, 82, 0.16);
+
+
+  /* ================================
+     TEXT
+     ================================ */
+
+  --text-primary: #F5F7F5;
+  --text-secondary: #B4BCB7;
+  --text-muted: #737D77;
+  --text-disabled: #4F5953;
+
+
+  /* ================================
+     BORDERS
+     ================================ */
+
+  --border: #1A2922;
+  --border-light: #22332B;
+  --border-hover: #304238;
+
+
+  /* ================================
+     STATUS COLORS
+     ================================ */
+
+  --success: #22C55E;
+  --success-soft: rgba(34, 197, 94, 0.12);
+
+  --warning: #F5A623;
+  --warning-soft: rgba(245, 166, 35, 0.12);
+
+  --danger: #EF5148;
+  --danger-soft: rgba(239, 81, 72, 0.12);
+
+  --info: #3B82F6;
+  --info-soft: rgba(59, 130, 246, 0.12);
+
+
+  /* ================================
+     BASIC
+     ================================ */
+
+  --white: #FFFFFF;
+  --black: #000000;
+}
