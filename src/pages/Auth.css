@@ -1,0 +1,417 @@
+/* =========================================
+   AUTH PAGE
+   ========================================= */
+
+.auth-page {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 24px;
+
+  background: var(--bg-primary);
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Background glow */
+
+.auth-page::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: -300px;
+  left: -200px;
+
+  background: rgba(150, 230, 82, 0.07);
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+.auth-page::after {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -300px;
+  bottom: -300px;
+
+  background: rgba(150, 230, 82, 0.05);
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+   ========================================= */
+
+.auth-container {
+  width: 100%;
+  max-width: 1120px;
+  min-height: 680px;
+
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+
+  background: var(--bg-secondary);
+
+  border: 1px solid var(--border);
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  position: relative;
+  z-index: 1;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================
+   LEFT BRANDING
+   ========================================= */
+
+.auth-brand {
+  padding: 52px;
+
+  display: flex;
+  flex-direction: column;
+
+  background:
+    linear-gradient(
+      145deg,
+      #0D1A15 0%,
+      #091410 60%,
+      #08110E 100%
+    );
+
+  border-right: 1px solid var(--border);
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  color: var(--text-primary);
+
+  font-size: 21px;
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+.brand-logo span span {
+  color: var(--primary);
+}
+
+.brand-logo-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--primary);
+
+  color: var(--bg-primary);
+
+  border-radius: 10px;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   BRAND CONTENT
+   ========================================= */
+
+.brand-content {
+  margin-top: auto;
+  margin-bottom: 45px;
+
+  max-width: 460px;
+}
+
+.brand-eyebrow {
+  margin: 0 0 18px;
+
+  color: var(--primary);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+.brand-content h1 {
+  margin: 0 0 24px;
+
+  color: var(--text-primary);
+
+  font-size: clamp(40px, 4.5vw, 58px);
+
+  line-height: 1.05;
+
+  letter-spacing: -2.5px;
+}
+
+.brand-content h1 span {
+  color: var(--primary);
+}
+
+.brand-description {
+  max-width: 420px;
+
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   FEATURES
+   ========================================= */
+
+.brand-features {
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+
+  margin-bottom: 45px;
+}
+
+.brand-feature {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+}
+
+.feature-icon {
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--primary-soft);
+
+  color: var(--primary);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   BRAND FOOTER
+   ========================================= */
+
+.brand-footer {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: var(--text-muted);
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+}
+
+.brand-footer-line {
+  width: 32px;
+  height: 2px;
+
+  background: var(--primary);
+}
+
+
+/* =========================================
+   RIGHT AUTH PANEL
+   ========================================= */
+
+.auth-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px;
+}
+
+.auth-panel-inner {
+  width: 100%;
+  max-width: 410px;
+}
+
+
+/* =========================================
+   LOGIN / REGISTER SWITCH
+   ========================================= */
+
+.auth-switch {
+  width: 100%;
+  height: 48px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  position: relative;
+
+  padding: 4px;
+
+  margin-bottom: 38px;
+
+  background: var(--bg-tertiary);
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+}
+
+.auth-switch-slider {
+  position: absolute;
+
+  top: 4px;
+  left: 4px;
+
+  width: calc(50% - 4px);
+  height: 38px;
+
+  background: var(--card-bg-elevated);
+
+  border: 1px solid var(--border-light);
+
+  border-radius: 7px;
+
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.2);
+
+  transition: transform 0.25s ease;
+}
+
+.auth-switch-button {
+  position: relative;
+  z-index: 1;
+
+  border: none;
+
+  background: transparent;
+
+  color: var(--text-muted);
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.auth-switch-button.active {
+  color: var(--text-primary);
+}
+
+.auth-switch-button:hover {
+  color: var(--text-primary);
+}
+
+
+/* =========================================
+   FORM CONTAINER
+   ========================================= */
+
+.auth-form-container {
+  width: 100%;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 850px) {
+
+  .auth-container {
+    grid-template-columns: 1fr;
+
+    max-width: 520px;
+
+    min-height: auto;
+  }
+
+  .auth-brand {
+    display: none;
+  }
+
+  .auth-panel {
+    padding: 45px 35px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .auth-page {
+    padding: 15px;
+  }
+
+  .auth-container {
+    border-radius: 18px;
+  }
+
+  .auth-panel {
+    padding: 32px 20px;
+  }
+
+  .auth-switch {
+    margin-bottom: 30px;
+  }
+}
