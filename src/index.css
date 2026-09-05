@@ -1,5 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 @theme {
   /* ================================
@@ -12,7 +12,6 @@
 
   --color-sidebar-bg: #091410;
 
-  /* Cards / Panels */
   --color-card-bg: #0C1713;
   --color-card-bg-hover: #101E18;
   --color-card-bg-elevated: #122019;
@@ -78,7 +77,7 @@
      FONT
      ================================ */
 
-  --font-inter: "Inter", sans-serif;
+  --font-space: "Space Grotesk", sans-serif;
 }
 
 
@@ -98,7 +97,7 @@ body {
 
 body {
   margin: 0;
-  font-family: var(--font-inter);
+  font-family: var(--font-space);
   background: var(--color-bg-primary);
   color: var(--color-text-primary);
   -webkit-font-smoothing: antialiased;
