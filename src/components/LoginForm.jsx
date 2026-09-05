@@ -1,4 +1,4 @@
-import "./AuthForm.css"
+import "../index.css"
 
 const LoginForm = () => {
   return (

@@ -1,11 +1,11 @@
-import "./Auth.css";
-import LoginForm from "../components/Auth/LoginForm";
-import RegisterForm from "../components/Auth/RegisterForm";
+import "../index.css";
+import LoginForm from "../components/LoginForm";
+import RegisterForm from "../components/RegisterForm";
 import { useState } from "react";
 
 const Auth = () => {
 
-  const [isRegister, setRegister] = useState(false);
+  const [isShowRegister, setShowRegister] = useState(false);
 
   return (
     <main className="auth-page">
@@ -77,31 +77,31 @@ const Auth = () => {
         <section className="auth-panel">
 
           <div className="auth-panel-inner">
-
-            {/* LOGIN / REGISTER SWITCH */}
-
             <div className="auth-switch">
 
-              <div className={`auth-switch-slider ${!isRegister ? "active": ""}`} ></div>
+              <div className={`auth-switch-slider ${isShowRegister ? "register" : ""} `} ></div>
 
-              <button className={`auth-switch-button ${!isRegister ? "active" : ""}`}
-              onClick={()=> {setRegister(false)}}>
+              <button className={`auth-switch-button ${!isShowRegister ? "active" : ""}`}
+              onClick={()=> {setShowRegister(false)}}>
                 Login
               </button>
 
-              <button className={`auth-switch-button ${isRegister ? "active" : ""}`}
-              onClick={()=> { setRegister(true)}} >
+              <button className={`auth-switch-button ${isShowRegister ? "active" : ""}`}
+              onClick={()=> { setShowRegister(true)}} >
                 Register
               </button>
 
             </div>
+
+            {/* LOGIN / REGISTER SWITCH */}
+
 
 
             {/* FORM */}
 
             <div className="auth-form-container">
 
-               {isRegister? <RegisterForm /> : <LoginForm/>}
+               {isShowRegister? <RegisterForm /> : <LoginForm/>}
 
             </div>
 

@@ -1,4 +1,4 @@
-import "./AddMember.css";
+import "../index.css";
 
 const AddMember = () => {
   return (
