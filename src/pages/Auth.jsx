@@ -1,8 +1,12 @@
-import "./Auth.css";
-import LoginForm from "../components/Auth/LoginForm";
-import RegisterForm from "../components/Auth/RegisterForm";
+import "../index.css";
+import LoginForm from "../components/LoginForm";
+import RegisterForm from "../components/RegisterForm";
+import { useState } from "react";
 
 const Auth = () => {
+
+  const [isShowRegister, setShowRegister] = useState(false);
+
   return (
     <main className="auth-page">
       <div className="auth-container">
@@ -73,37 +77,31 @@ const Auth = () => {
         <section className="auth-panel">
 
           <div className="auth-panel-inner">
-
-            {/* LOGIN / REGISTER SWITCH */}
-
             <div className="auth-switch">
 
-              <div className="auth-switch-slider"></div>
+              <div className={`auth-switch-slider ${isShowRegister ? "register" : ""} `} ></div>
 
-              <button className="auth-switch-button active">
+              <button className={`auth-switch-button ${!isShowRegister ? "active" : ""}`}
+              onClick={()=> {setShowRegister(false)}}>
                 Login
               </button>
 
-              <button className="auth-switch-button">
+              <button className={`auth-switch-button ${isShowRegister ? "active" : ""}`}
+              onClick={()=> { setShowRegister(true)}} >
                 Register
               </button>
 
             </div>
+
+            {/* LOGIN / REGISTER SWITCH */}
+
 
 
             {/* FORM */}
 
             <div className="auth-form-container">
 
-               {/* {/* 
-                // Your React logic will render either: */}
-
-                <LoginForm />
-
-                {/* // OR */}
-
-                <RegisterForm />
-               {/* */} */
+               {isShowRegister? <RegisterForm /> : <LoginForm/>}
 
             </div>
 
