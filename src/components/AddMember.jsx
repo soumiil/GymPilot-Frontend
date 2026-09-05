@@ -2,64 +2,176 @@ import "../index.css";
 
 const AddMember = () => {
   return (
-    <div className="modal-overlay">
-      <div className="add-member-modal">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm">
+
+      <div className="flex max-h-[90vh] w-full max-w-4xl flex-col overflow-hidden rounded-xl border border-border bg-card-bg shadow-2xl">
 
         {/* Header */}
-        <div className="modal-header">
+        <div className="flex items-center justify-between border-b border-border px-6 py-5">
+
           <div>
-            <h2>Add New Member</h2>
-            <p>Create a new member profile</p>
+            <h2 className="text-lg font-semibold text-text-primary">
+              Add New Member
+            </h2>
+
+            <p className="mt-1 text-sm text-text-muted">
+              Create a new member profile
+            </p>
           </div>
 
-          <button className="modal-close">×</button>
+          <button
+            className="
+              flex h-8 w-8 items-center justify-center
+              rounded-lg
+              text-xl leading-none
+              text-text-muted
+              transition
+              hover:bg-bg-tertiary
+              hover:text-text-primary
+            "
+          >
+            ×
+          </button>
+
         </div>
 
+
         {/* Body */}
-        <div className="modal-body">
+        <div className="flex-1 overflow-y-auto px-6 py-6">
 
           {/* Personal Information */}
-          <section className="form-section">
-            <div className="section-heading">
-              <h3>Personal Information</h3>
-              <p>Basic information about the member.</p>
+          <section className="border-b border-border pb-6">
+
+            <div className="mb-5">
+              <h3 className="text-sm font-semibold text-text-primary">
+                Personal Information
+              </h3>
+
+              <p className="mt-1 text-xs text-text-muted">
+                Basic information about the member.
+              </p>
             </div>
 
-            <div className="form-grid">
 
-              <div className="form-group">
-                <label>Full Name</label>
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-text-secondary">
+                  Full Name
+                </label>
+
                 <input
                   type="text"
                   placeholder="Enter full name"
+                  className="
+                    w-full rounded-lg
+                    border border-border
+                    bg-bg-tertiary
+                    px-3 py-2.5
+                    text-sm text-text-primary
+                    placeholder:text-text-muted
+                    outline-none
+                    transition
+                    hover:border-border-hover
+                    focus:border-primary
+                    focus:ring-2 focus:ring-primary-soft
+                  "
                 />
               </div>
 
-              <div className="form-group">
-                <label>Phone Number</label>
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-text-secondary">
+                  Phone Number
+                </label>
+
                 <input
                   type="tel"
                   placeholder="Enter phone number"
+                  className="
+                    w-full rounded-lg
+                    border border-border
+                    bg-bg-tertiary
+                    px-3 py-2.5
+                    text-sm text-text-primary
+                    placeholder:text-text-muted
+                    outline-none
+                    transition
+                    hover:border-border-hover
+                    focus:border-primary
+                    focus:ring-2 focus:ring-primary-soft
+                  "
                 />
               </div>
 
-              <div className="form-group">
-                <label>Email Address</label>
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-text-secondary">
+                  Email Address
+                </label>
+
                 <input
                   type="email"
                   placeholder="Enter email address"
+                  className="
+                    w-full rounded-lg
+                    border border-border
+                    bg-bg-tertiary
+                    px-3 py-2.5
+                    text-sm text-text-primary
+                    placeholder:text-text-muted
+                    outline-none
+                    transition
+                    hover:border-border-hover
+                    focus:border-primary
+                    focus:ring-2 focus:ring-primary-soft
+                  "
                 />
               </div>
 
-              <div className="form-group">
-                <label>Date of Birth</label>
-                <input type="date" />
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-text-secondary">
+                  Date of Birth
+                </label>
+
+                <input
+                  type="date"
+                  className="
+                    w-full rounded-lg
+                    border border-border
+                    bg-bg-tertiary
+                    px-3 py-2.5
+                    text-sm text-text-primary
+                    outline-none
+                    transition
+                    hover:border-border-hover
+                    focus:border-primary
+                    focus:ring-2 focus:ring-primary-soft
+                  "
+                />
               </div>
 
-              <div className="form-group">
-                <label>Gender</label>
 
-                <select>
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-text-secondary">
+                  Gender
+                </label>
+
+                <select
+                  className="
+                    w-full rounded-lg
+                    border border-border
+                    bg-bg-tertiary
+                    px-3 py-2.5
+                    text-sm text-text-primary
+                    outline-none
+                    transition
+                    hover:border-border-hover
+                    focus:border-primary
+                    focus:ring-2 focus:ring-primary-soft
+                  "
+                >
                   <option value="">Select gender</option>
                   <option>Male</option>
                   <option>Female</option>
@@ -68,26 +180,46 @@ const AddMember = () => {
               </div>
 
             </div>
+
           </section>
 
 
           {/* Membership */}
-          <section className="form-section">
+          <section className="border-b border-border py-6">
 
-            <div className="section-heading">
-              <h3>Membership</h3>
-              <p>Configure the member's membership.</p>
+            <div className="mb-5">
+              <h3 className="text-sm font-semibold text-text-primary">
+                Membership
+              </h3>
+
+              <p className="mt-1 text-xs text-text-muted">
+                Configure the member's membership.
+              </p>
             </div>
 
-            <div className="form-grid">
 
-              <div className="form-group">
-                <label>Membership Plan</label>
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
 
-                <select>
-                  <option value="">
-                    Select membership plan
-                  </option>
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-text-secondary">
+                  Membership Plan
+                </label>
+
+                <select
+                  className="
+                    w-full rounded-lg
+                    border border-border
+                    bg-bg-tertiary
+                    px-3 py-2.5
+                    text-sm text-text-primary
+                    outline-none
+                    transition
+                    hover:border-border-hover
+                    focus:border-primary
+                    focus:ring-2 focus:ring-primary-soft
+                  "
+                >
+                  <option value="">Select membership plan</option>
                   <option>Monthly</option>
                   <option>Quarterly</option>
                   <option>Half Yearly</option>
@@ -95,22 +227,74 @@ const AddMember = () => {
                 </select>
               </div>
 
-              <div className="form-group">
-                <label>Start Date</label>
-                <input type="date" />
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-text-secondary">
+                  Start Date
+                </label>
+
+                <input
+                  type="date"
+                  className="
+                    w-full rounded-lg
+                    border border-border
+                    bg-bg-tertiary
+                    px-3 py-2.5
+                    text-sm text-text-primary
+                    outline-none
+                    transition
+                    hover:border-border-hover
+                    focus:border-primary
+                    focus:ring-2 focus:ring-primary-soft
+                  "
+                />
               </div>
 
-              <div className="form-group">
-                <label>End Date</label>
-                <input type="date" />
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-text-secondary">
+                  End Date
+                </label>
+
+                <input
+                  type="date"
+                  className="
+                    w-full rounded-lg
+                    border border-border
+                    bg-bg-tertiary
+                    px-3 py-2.5
+                    text-sm text-text-primary
+                    outline-none
+                    transition
+                    hover:border-border-hover
+                    focus:border-primary
+                    focus:ring-2 focus:ring-primary-soft
+                  "
+                />
               </div>
 
-              <div className="form-group">
-                <label>Membership Amount</label>
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-text-secondary">
+                  Membership Amount
+                </label>
 
                 <input
                   type="number"
                   placeholder="Enter amount"
+                  className="
+                    w-full rounded-lg
+                    border border-border
+                    bg-bg-tertiary
+                    px-3 py-2.5
+                    text-sm text-text-primary
+                    placeholder:text-text-muted
+                    outline-none
+                    transition
+                    hover:border-border-hover
+                    focus:border-primary
+                    focus:ring-2 focus:ring-primary-soft
+                  "
                 />
               </div>
 
@@ -120,39 +304,92 @@ const AddMember = () => {
 
 
           {/* Emergency Contact */}
-          <section className="form-section">
+          <section className="border-b border-border py-6">
 
-            <div className="section-heading">
-              <h3>Emergency Contact</h3>
-              <p>Contact information for emergencies.</p>
+            <div className="mb-5">
+              <h3 className="text-sm font-semibold text-text-primary">
+                Emergency Contact
+              </h3>
+
+              <p className="mt-1 text-xs text-text-muted">
+                Contact information for emergencies.
+              </p>
             </div>
 
-            <div className="form-grid">
 
-              <div className="form-group">
-                <label>Contact Name</label>
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-text-secondary">
+                  Contact Name
+                </label>
 
                 <input
                   type="text"
                   placeholder="Enter contact name"
+                  className="
+                    w-full rounded-lg
+                    border border-border
+                    bg-bg-tertiary
+                    px-3 py-2.5
+                    text-sm text-text-primary
+                    placeholder:text-text-muted
+                    outline-none
+                    transition
+                    hover:border-border-hover
+                    focus:border-primary
+                    focus:ring-2 focus:ring-primary-soft
+                  "
                 />
               </div>
 
-              <div className="form-group">
-                <label>Relationship</label>
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-text-secondary">
+                  Relationship
+                </label>
 
                 <input
                   type="text"
                   placeholder="e.g. Father"
+                  className="
+                    w-full rounded-lg
+                    border border-border
+                    bg-bg-tertiary
+                    px-3 py-2.5
+                    text-sm text-text-primary
+                    placeholder:text-text-muted
+                    outline-none
+                    transition
+                    hover:border-border-hover
+                    focus:border-primary
+                    focus:ring-2 focus:ring-primary-soft
+                  "
                 />
               </div>
 
-              <div className="form-group">
-                <label>Phone Number</label>
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-text-secondary">
+                  Phone Number
+                </label>
 
                 <input
                   type="tel"
                   placeholder="Enter phone number"
+                  className="
+                    w-full rounded-lg
+                    border border-border
+                    bg-bg-tertiary
+                    px-3 py-2.5
+                    text-sm text-text-primary
+                    placeholder:text-text-muted
+                    outline-none
+                    transition
+                    hover:border-border-hover
+                    focus:border-primary
+                    focus:ring-2 focus:ring-primary-soft
+                  "
                 />
               </div>
 
@@ -162,37 +399,90 @@ const AddMember = () => {
 
 
           {/* Fitness */}
-          <section className="form-section">
+          <section className="pt-6">
 
-            <div className="section-heading">
-              <h3>Fitness Details</h3>
-              <p>Basic fitness information.</p>
+            <div className="mb-5">
+              <h3 className="text-sm font-semibold text-text-primary">
+                Fitness Details
+              </h3>
+
+              <p className="mt-1 text-xs text-text-muted">
+                Basic fitness information.
+              </p>
             </div>
 
-            <div className="form-grid">
 
-              <div className="form-group">
-                <label>Height (cm)</label>
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-text-secondary">
+                  Height (cm)
+                </label>
 
                 <input
                   type="number"
                   placeholder="Enter height"
+                  className="
+                    w-full rounded-lg
+                    border border-border
+                    bg-bg-tertiary
+                    px-3 py-2.5
+                    text-sm text-text-primary
+                    placeholder:text-text-muted
+                    outline-none
+                    transition
+                    hover:border-border-hover
+                    focus:border-primary
+                    focus:ring-2 focus:ring-primary-soft
+                  "
                 />
               </div>
 
-              <div className="form-group">
-                <label>Weight (kg)</label>
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-text-secondary">
+                  Weight (kg)
+                </label>
 
                 <input
                   type="number"
                   placeholder="Enter weight"
+                  className="
+                    w-full rounded-lg
+                    border border-border
+                    bg-bg-tertiary
+                    px-3 py-2.5
+                    text-sm text-text-primary
+                    placeholder:text-text-muted
+                    outline-none
+                    transition
+                    hover:border-border-hover
+                    focus:border-primary
+                    focus:ring-2 focus:ring-primary-soft
+                  "
                 />
               </div>
 
-              <div className="form-group">
-                <label>Fitness Goal</label>
 
-                <select>
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-text-secondary">
+                  Fitness Goal
+                </label>
+
+                <select
+                  className="
+                    w-full rounded-lg
+                    border border-border
+                    bg-bg-tertiary
+                    px-3 py-2.5
+                    text-sm text-text-primary
+                    outline-none
+                    transition
+                    hover:border-border-hover
+                    focus:border-primary
+                    focus:ring-2 focus:ring-primary-soft
+                  "
+                >
                   <option value="">Select goal</option>
                   <option>Weight Loss</option>
                   <option>Muscle Gain</option>
@@ -202,23 +492,56 @@ const AddMember = () => {
                 </select>
               </div>
 
-              <div className="form-group">
-                <label>Trainer</label>
 
-                <select>
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-text-secondary">
+                  Trainer
+                </label>
+
+                <select
+                  className="
+                    w-full rounded-lg
+                    border border-border
+                    bg-bg-tertiary
+                    px-3 py-2.5
+                    text-sm text-text-primary
+                    outline-none
+                    transition
+                    hover:border-border-hover
+                    focus:border-primary
+                    focus:ring-2 focus:ring-primary-soft
+                  "
+                >
                   <option value="">Assign trainer</option>
                   <option>Trainer 1</option>
                   <option>Trainer 2</option>
                 </select>
               </div>
 
-              <div className="form-group full-width">
-                <label>Medical Notes</label>
+
+              <div className="space-y-2 md:col-span-2">
+                <label className="block text-sm font-medium text-text-secondary">
+                  Medical Notes
+                </label>
 
                 <textarea
                   rows="3"
                   placeholder="Enter relevant medical information"
+                  className="
+                    w-full resize-none rounded-lg
+                    border border-border
+                    bg-bg-tertiary
+                    px-3 py-2.5
+                    text-sm text-text-primary
+                    placeholder:text-text-muted
+                    outline-none
+                    transition
+                    hover:border-border-hover
+                    focus:border-primary
+                    focus:ring-2 focus:ring-primary-soft
+                  "
                 />
+
               </div>
 
             </div>
@@ -227,15 +550,44 @@ const AddMember = () => {
 
         </div>
 
+
         {/* Footer */}
-        <div className="modal-footer">
-          <button className="secondary-btn">
+        <div className="flex items-center justify-end gap-3 border-t border-border bg-bg-secondary px-6 py-4">
+
+          <button
+            className="
+              rounded-lg
+              border border-border
+              bg-transparent
+              px-4 py-2.5
+              text-sm font-medium
+              text-text-secondary
+              transition
+              hover:border-border-hover
+              hover:bg-bg-tertiary
+              hover:text-text-primary
+            "
+          >
             Cancel
           </button>
 
-          <button className="primary-btn">
+          <button
+            className="
+              rounded-lg
+              bg-primary
+              px-5 py-2.5
+              text-sm font-semibold
+              text-bg-primary
+              transition
+              hover:bg-primary-hover
+              focus:outline-none
+              focus:ring-2 focus:ring-primary-soft
+              active:scale-[0.99]
+            "
+          >
             Add Member
           </button>
+
         </div>
 
       </div>
