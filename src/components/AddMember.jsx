@@ -1,16 +1,14 @@
-import "../index.css";
-
 const AddMember = () => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm">
 
-      <div className="flex max-h-[90vh] w-full max-w-4xl flex-col overflow-hidden rounded-xl border border-border bg-card-bg shadow-2xl">
+      <div className="flex max-h-[90vh] w-full max-w-4xl flex-col overflow-hidden rounded-2xl border border-border bg-card-bg shadow-2xl">
 
         {/* Header */}
         <div className="flex items-center justify-between border-b border-border px-6 py-5">
 
           <div>
-            <h2 className="text-lg font-semibold text-text-primary">
+            <h2 className="text-xl font-semibold tracking-tight text-text-primary">
               Add New Member
             </h2>
 
@@ -20,8 +18,9 @@ const AddMember = () => {
           </div>
 
           <button
+            type="button"
             className="
-              flex h-8 w-8 items-center justify-center
+              flex h-9 w-9 items-center justify-center
               rounded-lg
               text-xl leading-none
               text-text-muted
@@ -40,7 +39,7 @@ const AddMember = () => {
         <div className="flex-1 overflow-y-auto px-6 py-6">
 
           {/* Personal Information */}
-          <section className="border-b border-border pb-6">
+          <section className="border-b border-border pb-7">
 
             <div className="mb-5">
               <h3 className="text-sm font-semibold text-text-primary">
@@ -64,14 +63,14 @@ const AddMember = () => {
                   type="text"
                   placeholder="Enter full name"
                   className="
-                    w-full rounded-lg
+                    h-11 w-full rounded-lg
                     border border-border
                     bg-bg-tertiary
-                    px-3 py-2.5
+                    px-3
                     text-sm text-text-primary
                     placeholder:text-text-muted
                     outline-none
-                    transition
+                    transition-all duration-200
                     hover:border-border-hover
                     focus:border-primary
                     focus:ring-2 focus:ring-primary-soft
@@ -89,14 +88,14 @@ const AddMember = () => {
                   type="tel"
                   placeholder="Enter phone number"
                   className="
-                    w-full rounded-lg
+                    h-11 w-full rounded-lg
                     border border-border
                     bg-bg-tertiary
-                    px-3 py-2.5
+                    px-3
                     text-sm text-text-primary
                     placeholder:text-text-muted
                     outline-none
-                    transition
+                    transition-all duration-200
                     hover:border-border-hover
                     focus:border-primary
                     focus:ring-2 focus:ring-primary-soft
@@ -114,14 +113,14 @@ const AddMember = () => {
                   type="email"
                   placeholder="Enter email address"
                   className="
-                    w-full rounded-lg
+                    h-11 w-full rounded-lg
                     border border-border
                     bg-bg-tertiary
-                    px-3 py-2.5
+                    px-3
                     text-sm text-text-primary
                     placeholder:text-text-muted
                     outline-none
-                    transition
+                    transition-all duration-200
                     hover:border-border-hover
                     focus:border-primary
                     focus:ring-2 focus:ring-primary-soft
@@ -138,13 +137,13 @@ const AddMember = () => {
                 <input
                   type="date"
                   className="
-                    w-full rounded-lg
+                    h-11 w-full rounded-lg
                     border border-border
                     bg-bg-tertiary
-                    px-3 py-2.5
+                    px-3
                     text-sm text-text-primary
                     outline-none
-                    transition
+                    transition-all duration-200
                     hover:border-border-hover
                     focus:border-primary
                     focus:ring-2 focus:ring-primary-soft
@@ -160,13 +159,13 @@ const AddMember = () => {
 
                 <select
                   className="
-                    w-full rounded-lg
+                    h-11 w-full rounded-lg
                     border border-border
                     bg-bg-tertiary
-                    px-3 py-2.5
+                    px-3
                     text-sm text-text-primary
                     outline-none
-                    transition
+                    transition-all duration-200
                     hover:border-border-hover
                     focus:border-primary
                     focus:ring-2 focus:ring-primary-soft
@@ -185,7 +184,7 @@ const AddMember = () => {
 
 
           {/* Membership */}
-          <section className="border-b border-border py-6">
+          <section className="border-b border-border py-7">
 
             <div className="mb-5">
               <h3 className="text-sm font-semibold text-text-primary">
@@ -207,13 +206,13 @@ const AddMember = () => {
 
                 <select
                   className="
-                    w-full rounded-lg
+                    h-11 w-full rounded-lg
                     border border-border
                     bg-bg-tertiary
-                    px-3 py-2.5
+                    px-3
                     text-sm text-text-primary
                     outline-none
-                    transition
+                    transition-all duration-200
                     hover:border-border-hover
                     focus:border-primary
                     focus:ring-2 focus:ring-primary-soft
@@ -236,13 +235,13 @@ const AddMember = () => {
                 <input
                   type="date"
                   className="
-                    w-full rounded-lg
+                    h-11 w-full rounded-lg
                     border border-border
                     bg-bg-tertiary
-                    px-3 py-2.5
+                    px-3
                     text-sm text-text-primary
                     outline-none
-                    transition
+                    transition-all duration-200
                     hover:border-border-hover
                     focus:border-primary
                     focus:ring-2 focus:ring-primary-soft
@@ -259,13 +258,13 @@ const AddMember = () => {
                 <input
                   type="date"
                   className="
-                    w-full rounded-lg
+                    h-11 w-full rounded-lg
                     border border-border
                     bg-bg-tertiary
-                    px-3 py-2.5
+                    px-3
                     text-sm text-text-primary
                     outline-none
-                    transition
+                    transition-all duration-200
                     hover:border-border-hover
                     focus:border-primary
                     focus:ring-2 focus:ring-primary-soft
@@ -283,14 +282,14 @@ const AddMember = () => {
                   type="number"
                   placeholder="Enter amount"
                   className="
-                    w-full rounded-lg
+                    h-11 w-full rounded-lg
                     border border-border
                     bg-bg-tertiary
-                    px-3 py-2.5
+                    px-3
                     text-sm text-text-primary
                     placeholder:text-text-muted
                     outline-none
-                    transition
+                    transition-all duration-200
                     hover:border-border-hover
                     focus:border-primary
                     focus:ring-2 focus:ring-primary-soft
@@ -304,7 +303,7 @@ const AddMember = () => {
 
 
           {/* Emergency Contact */}
-          <section className="border-b border-border py-6">
+          <section className="border-b border-border py-7">
 
             <div className="mb-5">
               <h3 className="text-sm font-semibold text-text-primary">
@@ -328,14 +327,14 @@ const AddMember = () => {
                   type="text"
                   placeholder="Enter contact name"
                   className="
-                    w-full rounded-lg
+                    h-11 w-full rounded-lg
                     border border-border
                     bg-bg-tertiary
-                    px-3 py-2.5
+                    px-3
                     text-sm text-text-primary
                     placeholder:text-text-muted
                     outline-none
-                    transition
+                    transition-all duration-200
                     hover:border-border-hover
                     focus:border-primary
                     focus:ring-2 focus:ring-primary-soft
@@ -353,14 +352,14 @@ const AddMember = () => {
                   type="text"
                   placeholder="e.g. Father"
                   className="
-                    w-full rounded-lg
+                    h-11 w-full rounded-lg
                     border border-border
                     bg-bg-tertiary
-                    px-3 py-2.5
+                    px-3
                     text-sm text-text-primary
                     placeholder:text-text-muted
                     outline-none
-                    transition
+                    transition-all duration-200
                     hover:border-border-hover
                     focus:border-primary
                     focus:ring-2 focus:ring-primary-soft
@@ -378,14 +377,14 @@ const AddMember = () => {
                   type="tel"
                   placeholder="Enter phone number"
                   className="
-                    w-full rounded-lg
+                    h-11 w-full rounded-lg
                     border border-border
                     bg-bg-tertiary
-                    px-3 py-2.5
+                    px-3
                     text-sm text-text-primary
                     placeholder:text-text-muted
                     outline-none
-                    transition
+                    transition-all duration-200
                     hover:border-border-hover
                     focus:border-primary
                     focus:ring-2 focus:ring-primary-soft
@@ -399,7 +398,7 @@ const AddMember = () => {
 
 
           {/* Fitness */}
-          <section className="pt-6">
+          <section className="pt-7">
 
             <div className="mb-5">
               <h3 className="text-sm font-semibold text-text-primary">
@@ -423,14 +422,14 @@ const AddMember = () => {
                   type="number"
                   placeholder="Enter height"
                   className="
-                    w-full rounded-lg
+                    h-11 w-full rounded-lg
                     border border-border
                     bg-bg-tertiary
-                    px-3 py-2.5
+                    px-3
                     text-sm text-text-primary
                     placeholder:text-text-muted
                     outline-none
-                    transition
+                    transition-all duration-200
                     hover:border-border-hover
                     focus:border-primary
                     focus:ring-2 focus:ring-primary-soft
@@ -448,14 +447,14 @@ const AddMember = () => {
                   type="number"
                   placeholder="Enter weight"
                   className="
-                    w-full rounded-lg
+                    h-11 w-full rounded-lg
                     border border-border
                     bg-bg-tertiary
-                    px-3 py-2.5
+                    px-3
                     text-sm text-text-primary
                     placeholder:text-text-muted
                     outline-none
-                    transition
+                    transition-all duration-200
                     hover:border-border-hover
                     focus:border-primary
                     focus:ring-2 focus:ring-primary-soft
@@ -471,13 +470,13 @@ const AddMember = () => {
 
                 <select
                   className="
-                    w-full rounded-lg
+                    h-11 w-full rounded-lg
                     border border-border
                     bg-bg-tertiary
-                    px-3 py-2.5
+                    px-3
                     text-sm text-text-primary
                     outline-none
-                    transition
+                    transition-all duration-200
                     hover:border-border-hover
                     focus:border-primary
                     focus:ring-2 focus:ring-primary-soft
@@ -500,13 +499,13 @@ const AddMember = () => {
 
                 <select
                   className="
-                    w-full rounded-lg
+                    h-11 w-full rounded-lg
                     border border-border
                     bg-bg-tertiary
-                    px-3 py-2.5
+                    px-3
                     text-sm text-text-primary
                     outline-none
-                    transition
+                    transition-all duration-200
                     hover:border-border-hover
                     focus:border-primary
                     focus:ring-2 focus:ring-primary-soft
@@ -535,13 +534,12 @@ const AddMember = () => {
                     text-sm text-text-primary
                     placeholder:text-text-muted
                     outline-none
-                    transition
+                    transition-all duration-200
                     hover:border-border-hover
                     focus:border-primary
                     focus:ring-2 focus:ring-primary-soft
                   "
                 />
-
               </div>
 
             </div>
@@ -555,6 +553,7 @@ const AddMember = () => {
         <div className="flex items-center justify-end gap-3 border-t border-border bg-bg-secondary px-6 py-4">
 
           <button
+            type="button"
             className="
               rounded-lg
               border border-border
@@ -562,7 +561,7 @@ const AddMember = () => {
               px-4 py-2.5
               text-sm font-medium
               text-text-secondary
-              transition
+              transition-all duration-200
               hover:border-border-hover
               hover:bg-bg-tertiary
               hover:text-text-primary
@@ -572,14 +571,17 @@ const AddMember = () => {
           </button>
 
           <button
+            type="button"
             className="
               rounded-lg
               bg-primary
               px-5 py-2.5
               text-sm font-semibold
               text-bg-primary
-              transition
+              shadow-sm shadow-primary-glow
+              transition-all duration-200
               hover:bg-primary-hover
+              hover:shadow-md hover:shadow-primary-glow
               focus:outline-none
               focus:ring-2 focus:ring-primary-soft
               active:scale-[0.99]
@@ -591,6 +593,7 @@ const AddMember = () => {
         </div>
 
       </div>
+
     </div>
   );
 };

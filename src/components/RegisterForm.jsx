@@ -1,12 +1,10 @@
-import "../index.css";
-
 const RegisterForm = () => {
   return (
     <div className="w-full">
 
       {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-2xl font-bold text-text-primary">
+      <div className="mb-7">
+        <h1 className="text-2xl font-bold tracking-tight text-text-primary">
           Create your account
         </h1>
 
@@ -30,7 +28,7 @@ const RegisterForm = () => {
 
           <div className="relative">
 
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-text-muted">
+            <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-sm text-text-muted">
               ♙
             </span>
 
@@ -41,14 +39,14 @@ const RegisterForm = () => {
               placeholder="Enter your full name"
               autoComplete="name"
               className="
-                w-full rounded-lg
+                h-11 w-full rounded-lg
                 border border-border
                 bg-bg-tertiary
-                px-10 py-3
+                px-10
                 text-sm text-text-primary
                 placeholder:text-text-muted
                 outline-none
-                transition
+                transition-all duration-200
                 hover:border-border-hover
                 focus:border-primary
                 focus:ring-2 focus:ring-primary-soft
@@ -72,7 +70,7 @@ const RegisterForm = () => {
 
           <div className="relative">
 
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-sm text-text-muted">
+            <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-sm text-text-muted">
               @
             </span>
 
@@ -83,14 +81,14 @@ const RegisterForm = () => {
               placeholder="admin@example.com"
               autoComplete="email"
               className="
-                w-full rounded-lg
+                h-11 w-full rounded-lg
                 border border-border
                 bg-bg-tertiary
-                px-10 py-3
+                px-10
                 text-sm text-text-primary
                 placeholder:text-text-muted
                 outline-none
-                transition
+                transition-all duration-200
                 hover:border-border-hover
                 focus:border-primary
                 focus:ring-2 focus:ring-primary-soft
@@ -114,7 +112,7 @@ const RegisterForm = () => {
 
           <div className="relative">
 
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs text-text-muted">
+            <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[10px] text-text-muted">
               ◆
             </span>
 
@@ -125,14 +123,14 @@ const RegisterForm = () => {
               placeholder="Create a password"
               autoComplete="new-password"
               className="
-                w-full rounded-lg
+                h-11 w-full rounded-lg
                 border border-border
                 bg-bg-tertiary
-                px-10 py-3 pr-16
+                px-10 pr-16
                 text-sm text-text-primary
                 placeholder:text-text-muted
                 outline-none
-                transition
+                transition-all duration-200
                 hover:border-border-hover
                 focus:border-primary
                 focus:ring-2 focus:ring-primary-soft
@@ -142,11 +140,11 @@ const RegisterForm = () => {
             <button
               type="button"
               className="
-                absolute right-3 top-1/2
+                absolute right-3.5 top-1/2
                 -translate-y-1/2
                 text-xs font-medium
                 text-text-muted
-                transition
+                transition-colors
                 hover:text-primary
               "
             >
@@ -170,7 +168,7 @@ const RegisterForm = () => {
 
           <div className="relative">
 
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs text-text-muted">
+            <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[10px] text-text-muted">
               ◆
             </span>
 
@@ -181,14 +179,14 @@ const RegisterForm = () => {
               placeholder="Confirm your password"
               autoComplete="new-password"
               className="
-                w-full rounded-lg
+                h-11 w-full rounded-lg
                 border border-border
                 bg-bg-tertiary
-                px-10 py-3 pr-16
+                px-10 pr-16
                 text-sm text-text-primary
                 placeholder:text-text-muted
                 outline-none
-                transition
+                transition-all duration-200
                 hover:border-border-hover
                 focus:border-primary
                 focus:ring-2 focus:ring-primary-soft
@@ -198,11 +196,11 @@ const RegisterForm = () => {
             <button
               type="button"
               className="
-                absolute right-3 top-1/2
+                absolute right-3.5 top-1/2
                 -translate-y-1/2
                 text-xs font-medium
                 text-text-muted
-                transition
+                transition-colors
                 hover:text-primary
               "
             >
@@ -220,24 +218,25 @@ const RegisterForm = () => {
           <input
             type="checkbox"
             className="
-              mt-0.5
-              h-4 w-4
-              shrink-0
+              mt-0.5 h-4 w-4 shrink-0
               cursor-pointer
-              rounded
-              border-border
+              rounded border-border
               bg-bg-tertiary
               accent-primary
             "
           />
 
-          <span className="text-sm leading-5 text-text-secondary">
+          <span className="text-xs leading-5 text-text-secondary">
 
             I agree to the{" "}
 
             <a
               href="/terms"
-              className="font-medium text-primary transition hover:text-primary-light"
+              className="
+                font-medium text-primary
+                transition-colors
+                hover:text-primary-light
+              "
             >
               Terms of Service
             </a>{" "}
@@ -246,7 +245,11 @@ const RegisterForm = () => {
 
             <a
               href="/privacy"
-              className="font-medium text-primary transition hover:text-primary-light"
+              className="
+                font-medium text-primary
+                transition-colors
+                hover:text-primary-light
+              "
             >
               Privacy Policy
             </a>.
@@ -260,15 +263,17 @@ const RegisterForm = () => {
         <button
           type="submit"
           className="
-            flex w-full
+            flex h-11 w-full
             items-center justify-center gap-2
             rounded-lg
             bg-primary
-            px-4 py-3
+            px-4
             text-sm font-semibold
             text-bg-primary
-            transition
+            shadow-sm shadow-primary-glow
+            transition-all duration-200
             hover:bg-primary-hover
+            hover:shadow-md hover:shadow-primary-glow
             focus:outline-none
             focus:ring-2 focus:ring-primary-soft
             active:scale-[0.99]
